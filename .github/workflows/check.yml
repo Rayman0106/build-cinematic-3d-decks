@@ -1,0 +1,22 @@
+name: Check skill and offline examples
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: python scripts/build_examples.py
+      - run: python scripts/validate_package.py
+      - run: python scripts/validate_storyboard.py examples/storyboard.json
+      - run: python scripts/test_tools.py
+      - run: python scripts/check-continuity.py examples/fixtures/handoffs.json
+      - run: node scripts/test-kernel.mjs
+      - run: node scripts/test-motion.mjs
+      - run: node --check examples/lab/main.mjs
+      - run: git diff --exit-code -- examples/playground.html

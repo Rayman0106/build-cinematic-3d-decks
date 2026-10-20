@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cinematic Decks · Mechanism Lab</title>
+<style>@@CSS@@</style>
+<!-- Fixed Three.js r160, MIT:
+@@THREE_LICENSE@@
+-->
+</head>
+<body>
+<main>
+ <header><span class="eyebrow">CINEMATIC DECKS / OPEN SOURCE SKILL</span><h1>让变化有来处。</h1><p>六个最小机制，连接三维、数据与文字。可暂停、重播，或拖动时间检查每一刻。</p></header>
+ <div class="workspace">
+  <aside><label for="mode">选择机制</label><select id="mode" disabled>
+   <option value="handoff">01 · 同位 3D → 轮廓</option><option value="screen">02 · 平滑进入屏幕</option>
+   <option value="particles">03 · 双来源粒子组字</option><option value="ink">04 · 每字逐笔填充</option>
+   <option value="charts">05 · 点 → 图表慢交接</option><option value="rig">06 · 肘腕联动与鞠躬</option>
+  </select><h2 id="mode-title"></h2><p id="description"></p><div class="readout"><span>当前阶段</span><strong id="phase-label">Preparing</strong><code id="metrics"></code></div><p class="note" id="limit"></p></aside>
+  <section class="player" aria-label="Interactive mechanism example">
+   <div id="stage"><canvas id="three"></canvas><canvas id="flat" width="960" height="540" aria-hidden="true"></canvas><div id="screen-dom" aria-hidden="true"><img alt="Shared screen graphic"></div><div id="title-layer" aria-hidden="true"><span>ONE OBJECT.<br>ONE LANDING.</span><small>The world leaves. The subject stays.</small></div>
+    <div id="gate"><div><span class="eyebrow">BEFORE THE STORY BEGINS</span><h2 id="ready-title">准备机制与路径</h2><p id="load-label">字体 · 几何 · 粒子 · GPU</p><progress id="progress" max="6" value="0"></progress><button id="start" disabled>Preparing…</button></div></div>
+   </div>
+   <div class="controls"><button id="play" disabled>播放</button><button id="reset" disabled>回到起点</button><input id="time" type="range" min="0" max="12" step="0.01" value="0" aria-label="Scene time" disabled><output id="time-label">0.00 / 12.00 s</output></div>
+  </section>
+ </div>
+ <footer>程序几何与示意数据，无第三方人物或赛车。不是正式项目的录制。<a href="https://github.com/Rayman0106/build-cinematic-3d-decks">Skill 与完整说明</a></footer>
+</main>
+<script type="module">@@MODULE@@</script>
+</body></html>

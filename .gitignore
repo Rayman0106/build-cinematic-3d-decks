@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.tmp
+verification-local.json
+dist/
+.tool-test-*/

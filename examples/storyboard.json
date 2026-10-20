@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "title": "A minimal narrative handoff; illustrative geometry only",
+  "episodes": [
+    {
+      "id": "arrive",
+      "duration": 5,
+      "claim": "Establish the subject before explaining it",
+      "startState": {
+        "actors": {
+          "hero": {
+            "position": [
+              -5,
+              0.45,
+              0
+            ],
+            "heading": 0,
+            "scale": 1
+          }
+        },
+        "camera": {
+          "position": [
+            8,
+            4.5,
+            12
+          ],
+          "target": [
+            0,
+            0.5,
+            0
+          ],
+          "fov": 36
+        },
+        "worldAmount": 1,
+        "outlineAmount": 0
+      },
+      "endState": {
+        "actors": {
+          "hero": {
+            "position": [
+              0,
+              0.45,
+              0
+            ],
+            "heading": 0,
+            "scale": 1
+          }
+        },
+        "camera": {
+          "position": [
+            8,
+            4.5,
+            12
+          ],
+          "target": [
+            0,
+            0.5,
+            0
+          ],
+          "fov": 36
+        },
+        "worldAmount": 1,
+        "outlineAmount": 0
+      },
+      "beats": [
+        {
+          "start": 0,
+          "end": 3.8,
+          "action": "Move the hero along one visible path"
+        },
+        {
+          "start": 3.8,
+          "end": 5,
+          "action": "Settle into the reading composition"
+        }
+      ]
+    },
+    {
+      "id": "leave-world",
+      "duration": 3,
+      "claim": "Keep the subject while removing irrelevant context",
+      "startState": {
+        "actors": {
+          "hero": {
+            "position": [
+              0,
+              0.45,
+              0
+            ],
+            "heading": 0,
+            "scale": 1
+          }
+        },
+        "camera": {
+          "position": [
+            8,
+            4.5,
+            12
+          ],
+          "target": [
+            0,
+            0.5,
+            0
+          ],
+          "fov": 36
+        },
+        "worldAmount": 1,
+        "outlineAmount": 0
+      },
+      "endState": {
+        "actors": {
+          "hero": {
+            "position": [
+              0,
+              0.45,
+              0
+            ],
+            "heading": 0,
+            "scale": 1
+          }
+        },
+        "camera": {
+          "position": [
+            8,
+            4.5,
+            12
+          ],
+          "target": [
+            0,
+            0.5,
+            0
+          ],
+          "fov": 36
+        },
+        "worldAmount": 0,
+        "outlineAmount": 0
+      },
+      "beats": [
+        {
+          "start": 0,
+          "end": 3,
+          "action": "Composite the world away with opaque subject preserved"
+        }
+      ]
+    },
+    {
+      "id": "change-representation",
+      "duration": 4,
+      "claim": "The same object becomes an editable explanation",
+      "startState": {
+        "actors": {
+          "hero": {
+            "position": [
+              0,
+              0.45,
+              0
+            ],
+            "heading": 0,
+            "scale": 1
+          }
+        },
+        "camera": {
+          "position": [
+            8,
+            4.5,
+            12
+          ],
+          "target": [
+            0,
+            0.5,
+            0
+          ],
+          "fov": 36
+        },
+        "worldAmount": 0,
+        "outlineAmount": 0
+      },
+      "endState": {
+        "actors": {
+          "hero": {
+            "position": [
+              0,
+              0.45,
+              0
+            ],
+            "heading": 0,
+            "scale": 1
+          }
+        },
+        "camera": {
+          "position": [
+            8,
+            4.5,
+            12
+          ],
+          "target": [
+            0,
+            0.5,
+            0
+          ],
+          "fov": 36
+        },
+        "worldAmount": 0,
+        "outlineAmount": 1
+      },
+      "beats": [
+        {
+          "start": 0,
+          "end": 2.7,
+          "action": "Replace the shaded representation at the same projection"
+        },
+        {
+          "start": 2.7,
+          "end": 4,
+          "action": "Reveal the related title and hold"
+        }
+      ]
+    }
+  ]
+}

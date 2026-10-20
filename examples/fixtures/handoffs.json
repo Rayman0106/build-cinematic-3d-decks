@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "edges": [
+    {
+      "name": "outline-to-model-screen",
+      "mode": "screen",
+      "actor_ids": [
+        "hero"
+      ],
+      "screen_tolerance": 1.5,
+      "from": {
+        "actors": {
+          "hero": {
+            "bounds": [
+              170,
+              220,
+              460,
+              150
+            ],
+            "anchors": {
+              "nose": [
+                180,
+                280
+              ],
+              "rear": [
+                620,
+                230
+              ],
+              "frontWheel": [
+                280,
+                340
+              ]
+            }
+          }
+        }
+      },
+      "to": {
+        "actors": {
+          "hero": {
+            "bounds": [
+              170,
+              220,
+              460,
+              150
+            ],
+            "anchors": {
+              "nose": [
+                180,
+                280
+              ],
+              "rear": [
+                620,
+                230
+              ],
+              "frontWheel": [
+                280,
+                340
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "episode-world-boundary",
+      "mode": "world",
+      "actor_ids": [
+        "hero"
+      ],
+      "world_tolerance": 0.001,
+      "from": {
+        "actors": {
+          "hero": {
+            "position": [
+              0,
+              0.45,
+              0
+            ],
+            "heading": 0,
+            "scale": 1
+          }
+        },
+        "camera": {
+          "position": [
+            8,
+            4.5,
+            12
+          ],
+          "target": [
+            0,
+            0.5,
+            0
+          ],
+          "fov": 36
+        },
+        "worldAmount": 1,
+        "outlineAmount": 0
+      },
+      "to": {
+        "actors": {
+          "hero": {
+            "position": [
+              0,
+              0.45,
+              0
+            ],
+            "heading": 0,
+            "scale": 1
+          }
+        },
+        "camera": {
+          "position": [
+            8,
+            4.5,
+            12
+          ],
+          "target": [
+            0,
+            0.5,
+            0
+          ],
+          "fov": 36
+        },
+        "worldAmount": 1,
+        "outlineAmount": 0
+      }
+    }
+  ]
+}
