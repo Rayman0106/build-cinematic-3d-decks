@@ -2,6 +2,8 @@
 
 This package distinguishes new mechanism examples from the two finished case-study decks.
 
+Version 1.0.1 clarifies the README, skill entry point and UI description: supported tasks, expected inputs/outputs and the two case-study storylines. The lab and reusable runtime code are unchanged from v1.0.0. Documentation links, package structure and skill metadata are rechecked for this revision; numerical tests remain covered by the automated workflow.
+
 ## Executable checks
 
 The release is checked with the following commands:

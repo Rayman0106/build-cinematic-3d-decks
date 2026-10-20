@@ -1,4 +1,4 @@
 interface:
   display_name: "2D × 3D 叙事演示"
-  short_description: "故事线驱动的三维演示：模型、相机、轮廓、人物关节与语义字体动画"
+  short_description: "把报告做成有故事线的 2D+3D 网页演示，覆盖选材、镜头、字效与完整交付"
   default_prompt: "使用 $build-cinematic-3d-decks 设计或改进一份 HTML/WebGL 演示，先确定故事线、模型条件、静态落点与相邻端点，再实现连续相机、语义字效和预处理，并明确验证范围。"

@@ -1,14 +1,24 @@
 ---
 name: build-cinematic-3d-decks
-description: "Design, implement and repair narrative HTML/WebGL presentations with readable 2D slides, continuous 3D transitions, semantic typography and chart interactions. Use for model sourcing and adaptation, camera and pose continuity, photo/outline/model handoffs, character animation, startup preparation and reproducible offline delivery."
+description: "Create or repair HTML/WebGL presentations combining readable 2D slides, continuous 3D scenes and content-driven text/chart animation. Use to turn a topic or report into a storyboard and runnable deck, or improve an existing deck's models, camera, transitions, character motion and loading behavior."
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # 用同一条故事线连接 2D 阅读与 3D 动作
 
 把三维动作当作概念之间的连接，把二维页面当作观众可以停下来理解的落点。经验来自 [F1 Economics](https://github.com/Rayman0106/f1-economics-3d-deck) 与 [Reaction Time Mathematics](https://github.com/Rayman0106/reaction-time-math-3d-deck)。复用方法和代码接口，不照搬题材、页数、私人数据或资产授权。
+
+## 可以承担的任务与预期输出
+
+- **从主题/报告做完整演示**：提炼问题、证据和结论，选择贯穿对象；输出故事线、分镜、可读页面、3D 转场和可运行 HTML 工程。
+- **设计关键动画**：模型/轮廓/照片交接、进入实体屏幕、图表变换、内容驱动字效；输出明确的视觉关系、端点状态与实现。
+- **处理模型和角色**：按镜头需求选材、适配部件/骨架/材质，设计或重定向动作；输出可用资产适配及来源许可记录。
+- **接管与修复**：定位跳位、穿模、遮挡、闪烁和卡顿；只改授权范围，输出原因、修改及实际验证证据。
+- **准备交付**：预计算、加载/Start、离线打包、源码与构建说明；发布和清理按当前授权执行。
+
+先根据用户目标选择工作方式，再读下面对应参考。默认结果是浏览器 HTML/WebGL 演示；已有批准的内容与格式优先。Skill 提供决策方法、代码机制与案例，实际模型下载、运行和视觉检查依赖当前环境工具。
 
 ## 先确认任务边界
 
