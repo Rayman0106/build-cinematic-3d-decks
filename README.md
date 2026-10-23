@@ -8,6 +8,20 @@
 
 English: a Codex skill that helps an AI turn reports, ideas or existing code into narrative browser presentations, combining readable 2D slides with continuous 3D scenes, meaningful text/chart animation and reproducible offline delivery.
 
+## English overview · what you can build
+
+Give your AI a report, a topic, or an existing HTML project. This skill guides it through a complete browser-presentation workflow:
+
+- **A narrative storyboard:** connect the question, evidence and conclusion through an object that persists across slides.
+- **Continuous 2D/3D handoffs:** match model, outline, photo and screen projections; preserve position and camera state at the boundary.
+- **Meaningful text and charts:** form a title from both real data groups, write letter strokes, or keep point identity while building chart geometry.
+- **Usable scenes:** find licensed models, adapt joints/wheels/components, compose the camera, check occlusion, and prepare resources before Start.
+- **A maintainable delivery:** readable slides, an offline HTML deck, source, asset credits, build scripts and explicit verification limits.
+
+The two complete cases are [F1 Economics](https://github.com/Rayman0106/f1-economics-3d-deck) and [Reaction Time](https://github.com/Rayman0106/reaction-time-math-3d-deck). The [six-study offline Lab](examples/playground.html) isolates the mechanisms. A lightweight [Showcase is prepared in `site/`](site/README.md); it is not yet a deployed service. There is no online prompt-to-deck generator.
+
+**Quick start:** download the [latest skill ZIP](https://github.com/Rayman0106/build-cinematic-3d-decks/releases/latest), install it under `~/.codex/skills/build-cinematic-3d-decks/`, and open a new Codex conversation. Ask: “Use $build-cinematic-3d-decks to turn this report into a browser presentation. Start with a storyboard and deliver the offline HTML and rebuildable source.”
+
 ## 装上以后，AI 可以帮你做什么？
 
 它把两个完整项目的设计方法、实现代码和修复经验交给执行任务的 AI，覆盖从内容策划到可重建工程的九类具体工作。

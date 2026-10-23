@@ -1,0 +1,195 @@
+{
+  "created": "2026-10-22",
+  "images": [
+    {
+      "file": "f1-grid.webp",
+      "kind": "saved case frame derivative",
+      "source": "f1-economics-3d-deck/docs/media/grid.jpg",
+      "sourceSha256": "7a463e8faab4a44dd255bc8995e6cb60704092f1f1567655249cf1ecb33fa4f0",
+      "pixels": [
+        1600,
+        900
+      ],
+      "sha256": "4ffc4374f9693dc330d3490d606194dcc206b2a654108077a9acf09aec82ccbc",
+      "bytes": 106578
+    },
+    {
+      "file": "f1-grid-small.webp",
+      "kind": "saved case frame derivative",
+      "source": "f1-economics-3d-deck/docs/media/grid.jpg",
+      "sourceSha256": "7a463e8faab4a44dd255bc8995e6cb60704092f1f1567655249cf1ecb33fa4f0",
+      "pixels": [
+        900,
+        900
+      ],
+      "sha256": "a42c3711f9954cac3a953547e971976246f6abd7de1cb9feb9c52fab0ecce93c",
+      "bytes": 68896
+    },
+    {
+      "file": "f1-cover.webp",
+      "kind": "saved case frame derivative",
+      "source": "f1-economics-3d-deck/docs/media/cover.jpg",
+      "sourceSha256": "48d66c64f25580cedd776983d34a3d126554e0fe3cbe4cd374d9be6631c3262b",
+      "pixels": [
+        1600,
+        900
+      ],
+      "sha256": "f7b20667b82302679c17c78f2c4a9f36a52cd7801fa621bd35fd3b9d6f72c361",
+      "bytes": 52354
+    },
+    {
+      "file": "reaction-cover.webp",
+      "kind": "saved case frame derivative",
+      "source": "reaction-time-math-3d-deck/docs/media/study-room.jpg",
+      "sourceSha256": "de44cc6226fa53c5dcbef2ae533e5c1fece559ab561e4d35ea714779d9ee17d1",
+      "pixels": [
+        1600,
+        900
+      ],
+      "sha256": "03afc3d2d9b559e00499bcd782a0e564d682c6d62f46bc7b5cdeb7364178662f",
+      "bytes": 78700
+    },
+    {
+      "file": "social-preview.jpg",
+      "kind": "editorial social card over saved F1 frame",
+      "source": "f1-economics-3d-deck/docs/media/grid.jpg",
+      "sourceSha256": "7a463e8faab4a44dd255bc8995e6cb60704092f1f1567655249cf1ecb33fa4f0",
+      "pixels": [
+        1200,
+        630
+      ],
+      "sha256": "04cdcc31682b29c0ca6ff169b18d380efba91c9ce795540d688951adab989240",
+      "bytes": 117594
+    }
+  ],
+  "font": {
+    "name": "Manrope",
+    "license": "SIL OFL 1.1",
+    "source": "reaction-time-math-3d-deck/assets/fonts/Manrope.ttf",
+    "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
+  },
+  "videos": {
+    "created": "2026-10-22",
+    "type": "editorial cuts, not new browser recordings",
+    "audio": false,
+    "sources": [
+      {
+        "id": "f1-master",
+        "kind": "saved final-deck recording",
+        "sha256": "4b8af626ed2b444861a514c71e6f76c87e77fd2ae32b60208b7d82f4910afe26",
+        "pixels": [
+          2400,
+          1350
+        ],
+        "fps": 60,
+        "recorded": "2026-10-13"
+      },
+      {
+        "id": "math-motion",
+        "kind": "archived development motion GIF",
+        "sha256": "bbee7d3f5ea045dffcbf5c1236958b410aff1bc90a421e073bd61d162efb3961",
+        "pixels": [
+          831,
+          467
+        ],
+        "frames": 103,
+        "note": "Low source frame rate; repeated, never interpolated. Final typography and transitions not shown.",
+        "seconds": 11.2
+      }
+    ],
+    "promo": {
+      "duration": 25,
+      "cuts": [
+        {
+          "start": 0,
+          "length": 5,
+          "source": "f1-master",
+          "sourceStart": 16
+        },
+        {
+          "start": 5,
+          "length": 5,
+          "source": "f1-master",
+          "sourceStart": 25
+        },
+        {
+          "start": 10,
+          "length": 5,
+          "source": "f1-master",
+          "sourceStart": 69.8
+        },
+        {
+          "start": 15,
+          "length": 5,
+          "source": "math-motion",
+          "sourceStart": 0
+        },
+        {
+          "start": 20,
+          "length": 5,
+          "source": "original editorial closing graphic"
+        }
+      ]
+    },
+    "technical": {
+      "duration": 55,
+      "status": "draft; not final Lab capture",
+      "cuts": [
+        {
+          "start": 0,
+          "length": 8,
+          "source": "f1-master",
+          "sourceStart": 22
+        },
+        {
+          "start": 8,
+          "length": 7,
+          "source": "original workflow diagram"
+        },
+        {
+          "start": 15,
+          "length": 20,
+          "source": "four original storyboard cards; Lab browser capture pending"
+        },
+        {
+          "start": 35,
+          "length": 10,
+          "source": "math-motion",
+          "sourceStart": 0
+        },
+        {
+          "start": 45,
+          "length": 10,
+          "source": "original install graphic"
+        }
+      ]
+    },
+    "files": {
+      "Cinematic-3D-Showcase-25s-2400x1350-60fps.mp4": {
+        "bytes": 37930319,
+        "sha256": "e87fa1322d9ab0b926a8b43b11bca36f196563f8e73979d3f6ce84033ca4914e"
+      },
+      "Cinematic-3D-Technical-Draft-55s-2400x1350-60fps.mp4": {
+        "bytes": 23226393,
+        "sha256": "9d97887ee7f62268dececb0573d4555ac06c51dba38d06c310e425437d340112"
+      },
+      "f1-handoff.mp4": {
+        "bytes": 1569260,
+        "sha256": "c28727b8c9f68bf3a4a0351e4246f55c67484a2b8dea473edc00995fd2e33b95"
+      },
+      "reaction-motion.mp4": {
+        "bytes": 516612,
+        "sha256": "d16dafcb79d01b3473823bd83b10fe1593fda40191bcb05ed980892817168e20"
+      },
+      "showcase-25s.mp4": {
+        "bytes": 3093923,
+        "sha256": "d0520f0ef5f1e269e055528705e2ab127374de0c9391158e17087125d8dfc6a7"
+      },
+      "Cinematic-3D-Technical-Draft-55s-720p.mp4": {
+        "bytes": 2305889,
+        "sha256": "176f7f6916fba7c305efbf01784f8197f6071bf1860874b61ea458c7996360c3"
+      }
+    }
+  },
+  "notes": "New site derivatives of existing case media. No newly recorded project/Lab footage. Case asset credits still apply."
+}
