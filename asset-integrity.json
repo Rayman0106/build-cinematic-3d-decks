@@ -1,0 +1,110 @@
+[
+  {
+    "asset": "f1-alpine.glb",
+    "sha256": "c6e39dc9f8ef568048acf62c5641f37ea411f725ef3020783323f2b444652466",
+    "bytes": 21643860,
+    "chunks": [
+      "assets/f1-alpine.part0.bin",
+      "assets/f1-alpine.part1.bin"
+    ]
+  },
+  {
+    "asset": "f1-aston.glb",
+    "sha256": "9648e564e47c58bd7249c8f065274049d60ca458ac37bced8f21583b1cd689cb",
+    "bytes": 28974192,
+    "chunks": [
+      "assets/f1-aston.part0.bin",
+      "assets/f1-aston.part1.bin"
+    ]
+  },
+  {
+    "asset": "f1-audi.glb",
+    "sha256": "c87be3c91485070fee8385ae266411b8d95c62867788250247ee586c033f090a",
+    "bytes": 28919896,
+    "chunks": [
+      "assets/f1-audi.part0.bin",
+      "assets/f1-audi.part1.bin"
+    ]
+  },
+  {
+    "asset": "f1-cadillac.glb",
+    "sha256": "2adfe02f0079902e0b8e2e11f6ba4d97e9beae8085f433f6fb65a1332b35e46c",
+    "bytes": 27135416,
+    "chunks": [
+      "assets/f1-cadillac.part0.bin",
+      "assets/f1-cadillac.part1.bin"
+    ]
+  },
+  {
+    "asset": "f1-ferrari.glb",
+    "sha256": "24d2923ca014351cb5f345b7b22d79b499835e6c76dec6b5c77ce34d8b369f8b",
+    "bytes": 25813056,
+    "chunks": [
+      "assets/f1-ferrari.part0.bin",
+      "assets/f1-ferrari.part1.bin"
+    ]
+  },
+  {
+    "asset": "f1-haas.glb",
+    "sha256": "a8e7426ebafffe8a424fd6f46ad8433cd159fe3e27c8799e91934262e983fab6",
+    "bytes": 28829404,
+    "chunks": [
+      "assets/f1-haas.part0.bin",
+      "assets/f1-haas.part1.bin"
+    ]
+  },
+  {
+    "asset": "f1-mclaren.glb",
+    "sha256": "71cbcf6a4643fd95a0ad68bbc79344f13be96f96f1a3156f9353a01727ed252a",
+    "bytes": 25929244,
+    "chunks": [
+      "assets/f1-mclaren.part0.bin",
+      "assets/f1-mclaren.part1.bin"
+    ]
+  },
+  {
+    "asset": "f1-mercedes.glb",
+    "sha256": "0dfa4ca61327d0a47fcae8acb18ea86929481306584add447bc42f45e684121e",
+    "bytes": 27319192,
+    "chunks": [
+      "assets/f1-mercedes.part0.bin",
+      "assets/f1-mercedes.part1.bin"
+    ]
+  },
+  {
+    "asset": "f1-monza-scenery.glb",
+    "sha256": "016c1e9748dec8f478d0609f3abc5f36509db797d05618ddbf0d562fd8845dff",
+    "bytes": 16465072,
+    "chunks": []
+  },
+  {
+    "asset": "f1-racingbulls.glb",
+    "sha256": "3ecbfbec3b794bf6698ca535bdafebbc421d51cca1d352f726b5cbc0f8d2ab7a",
+    "bytes": 11408064,
+    "chunks": []
+  },
+  {
+    "asset": "f1-redbull.glb",
+    "sha256": "ba15224e8a542f58554d1826d998c58490563e611931c71d2565e9941c5893dd",
+    "bytes": 25308668,
+    "chunks": [
+      "assets/f1-redbull.part0.bin",
+      "assets/f1-redbull.part1.bin"
+    ]
+  },
+  {
+    "asset": "f1-start-gantry.glb",
+    "sha256": "44768208d30ab1e79cd944e5d184945804194160714cae53d996180b7ffd6407",
+    "bytes": 1729448,
+    "chunks": []
+  },
+  {
+    "asset": "f1-williams.glb",
+    "sha256": "bfec9f9c2f495b07f5a93047c4ebef6cdbe39a822364bace15b36ebc6e1944b2",
+    "bytes": 23621852,
+    "chunks": [
+      "assets/f1-williams.part0.bin",
+      "assets/f1-williams.part1.bin"
+    ]
+  }
+]

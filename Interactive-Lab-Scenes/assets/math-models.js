@@ -1,0 +1,13 @@
+window.__caseModelParts=[];
+document.write("<script src=\"assets/math-models.part0.js\"></script>");
+document.write("<script src=\"assets/math-models.part1.js\"></script>");
+document.write("<script src=\"assets/math-models.part2.js\"></script>");
+document.write("<script src=\"assets/math-models.part3.js\"></script>");
+document.write("<script src=\"assets/math-models.part4.js\"></script>");
+document.write("<script src=\"assets/math-models.part5.js\"></script>");
+document.write("<script src=\"assets/math-models.part6.js\"></script>");
+document.write("<script src=\"assets/math-models.part7.js\"></script>");
+document.write("<script src=\"assets/math-models.part8.js\"></script>");
+document.write("<script src=\"assets/math-models.part9.js\"></script>");
+document.write("<script src=\"assets/math-models.part10.js\"></script>");
+document.write("<script>window.DECK_MODEL_DATA=JSON.parse(window.__caseModelParts.join(\"\"));delete window.__caseModelParts;</script>");
