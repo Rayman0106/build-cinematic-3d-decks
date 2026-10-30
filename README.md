@@ -18,7 +18,7 @@ Give your AI a report, a topic, or an existing HTML project. This skill guides i
 - **Usable scenes:** find licensed models, adapt joints/wheels/components, compose the camera, check occlusion, and prepare resources before Start.
 - **A maintainable delivery:** readable slides, an offline HTML deck, source, asset credits, build scripts and explicit verification limits.
 
-The two complete cases are [F1 Economics](https://github.com/Rayman0106/f1-economics-3d-deck) and [Reaction Time](https://github.com/Rayman0106/reaction-time-math-3d-deck). The [six-study offline Lab](examples/playground.html) isolates the mechanisms. A lightweight [Showcase is prepared in `site/`](site/README.md); it is not yet a deployed service. There is no online prompt-to-deck generator.
+The two complete cases are [F1 Economics](https://github.com/Rayman0106/f1-economics-3d-deck) and [Reaction Time](https://github.com/Rayman0106/reaction-time-math-3d-deck). The [six-study offline Lab](examples/playground.html) isolates the mechanisms. Explore the public [Showcase](https://rayman0106.github.io/build-cinematic-3d-decks/) and [Interactive Lab](https://rayman0106.github.io/build-cinematic-3d-decks/lab/), including a 55-second technical film. There is no online prompt-to-deck generator.
 
 For a local showcase with the actual project assets and original choreography, use the [Real Project Lab builder](examples/case-lab/README.md) with your existing standalone case decks. Its native runtime payloads remain under each project's asset terms and are generated locally; the small procedural mechanism studies are a separate teaching tool.
 

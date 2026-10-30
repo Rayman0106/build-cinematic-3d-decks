@@ -1,5 +1,9 @@
 # Showcase preparation — 22 October 2026
 
+## GitHub Pages publication — 30 October 2026
+
+Public showcase: https://rayman0106.github.io/build-cinematic-3d-decks/; production assets are in `gh-pages`. The first Lab view is the dot-plot experiment and the budget-bar car is the second. The public character uses the separately published CC0 motion; no raw or retargeted Mixamo track is distributed. Full-grid inspection remains local. The current source tests pass; online observations must be reported separately from build checks.
+
 ## Current revision 2 — 30 October 2026
 
 The owner rejected the short promo and duplicated montage approach. The homepage now offers one 55-second technical film. Its native actions reach their endpoints before a 0.6-second dissolve; the budget-bar car and development sequence are continuous. Screen-entry footage includes the following page's complete title animation. The 25-second master remains an explicitly withdrawn local archive and is no longer linked or shipped as a current web preview. The Lab's second group is now **car out of budget bar**, and its fifth/default group is the **Mean / Median dot plot**. Camera paths, actor paths, Monza and the approved full decks remain unchanged. Current sources and review receipts accompany the local v2 output. The rest of this file records earlier iterations.
