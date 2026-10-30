@@ -2,29 +2,58 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cinematic Decks · Mechanism Lab</title>
+<meta name="color-scheme" content="dark light"><meta name="theme-color" content="#111716">
+<meta name="description" content="六个可调节的动画实验：3D 与轮廓、屏幕交接、双来源粒子、逐笔书写、图表与关节联动。离线运行。">
+<title>Interactive Lab · Cinematic 3D Decks</title>
 <style>@@CSS@@</style>
 <!-- Fixed Three.js r160, MIT:
 @@THREE_LICENSE@@
 -->
 </head>
 <body>
+<a class="skip-link" href="#experiment">跳至实验</a>
 <main>
- <header><span class="eyebrow">CINEMATIC DECKS / OPEN SOURCE SKILL</span><h1>让变化有来处。</h1><p>六个最小机制，连接三维、数据与文字。可暂停、重播，或拖动时间检查每一刻。</p></header>
+ <header class="lab-header">
+  <a class="brand" href="https://github.com/Rayman0106/build-cinematic-3d-decks" aria-label="Cinematic 3D Decks 源码"><span class="brand-mark" aria-hidden="true">C<span>↗</span></span><span>CINEMATIC<br><b>3D DECKS</b></span></a>
+  <div class="header-note"><span class="status-dot" aria-hidden="true"></span>程序几何 · 离线运行 · 开源</div>
+  <a class="source-link" href="https://github.com/Rayman0106/build-cinematic-3d-decks/tree/main/examples/lab">View source ↗</a>
+ </header>
+ <section class="intro"><div><p class="eyebrow">SIX STUDIES / ONE CONNECTED STORY</p><h1>Interactive <em>Lab.</em></h1></div><p>动一下参数，看懂一次交接。<br>从三维落点到文字成形，让每个变化都有来处。</p></section>
  <div class="workspace">
-  <aside><label for="mode">选择机制</label><select id="mode" disabled>
-   <option value="handoff">01 · 同位 3D → 轮廓</option><option value="screen">02 · 平滑进入屏幕</option>
-   <option value="particles">03 · 双来源粒子组字</option><option value="ink">04 · 每字逐笔填充</option>
-   <option value="charts">05 · 点 → 图表慢交接</option><option value="rig">06 · 肘腕联动与鞠躬</option>
-  </select><h2 id="mode-title"></h2><p id="description"></p><div class="readout"><span>当前阶段</span><strong id="phase-label">Preparing</strong><code id="metrics"></code></div><p class="note" id="limit"></p></aside>
-  <section class="player" aria-label="Interactive mechanism example">
-   <div id="stage"><canvas id="three"></canvas><canvas id="flat" width="960" height="540" aria-hidden="true"></canvas><div id="screen-dom" aria-hidden="true"><img alt="Shared screen graphic"></div><div id="title-layer" aria-hidden="true"><span>ONE OBJECT.<br>ONE LANDING.</span><small>The world leaves. The subject stays.</small></div>
-    <div id="gate"><div><span class="eyebrow">BEFORE THE STORY BEGINS</span><h2 id="ready-title">准备机制与路径</h2><p id="load-label">字体 · 几何 · 粒子 · GPU</p><progress id="progress" max="6" value="0"></progress><button id="start" disabled>Preparing…</button></div></div>
+  <aside class="study-sidebar" aria-label="选择实验">
+   <div class="sidebar-label">选择一个实验 <span>01—06</span></div>
+   <label class="mobile-picker" for="mode">实验<select id="mode" disabled>
+    <option value="handoff">01 · 3D → 轮廓</option><option value="screen">02 · 进入屏幕</option><option value="particles">03 · 双来源组字</option><option value="ink">04 · 逐笔书写</option><option value="charts">05 · 点 → 图表</option><option value="rig">06 · 关节联动</option>
+   </select></label>
+   <nav id="study-nav" role="tablist" aria-label="六种机制" aria-orientation="vertical">
+    <button id="tab-handoff" type="button" role="tab" aria-selected="true" aria-controls="experiment" tabindex="0" data-study="handoff" disabled><span class="study-number">01</span><span><b>3D → 轮廓</b><small>同一个位置，两种表示</small></span><span class="study-arrow" aria-hidden="true">↗</span></button>
+    <button id="tab-screen" type="button" role="tab" aria-selected="false" aria-controls="experiment" tabindex="-1" data-study="screen" disabled><span class="study-number">02</span><span><b>进入屏幕</b><small>实体空间走向二维证据</small></span><span class="study-arrow" aria-hidden="true">↗</span></button>
+    <button id="tab-particles" type="button" role="tab" aria-selected="false" aria-controls="experiment" tabindex="-1" data-study="particles" disabled><span class="study-number">03</span><span><b>双来源组字</b><small>让结论看得见出处</small></span><span class="study-arrow" aria-hidden="true">↗</span></button>
+    <button id="tab-ink" type="button" role="tab" aria-selected="false" aria-controls="experiment" tabindex="-1" data-study="ink" disabled><span class="study-number">04</span><span><b>逐笔书写</b><small>沿笔画生成真实字形</small></span><span class="study-arrow" aria-hidden="true">↗</span></button>
+    <button id="tab-charts" type="button" role="tab" aria-selected="false" aria-controls="experiment" tabindex="-1" data-study="charts" disabled><span class="study-number">05</span><span><b>点 → 图表</b><small>先辨认结构，再变实体</small></span><span class="study-arrow" aria-hidden="true">↗</span></button>
+    <button id="tab-rig" type="button" role="tab" aria-selected="false" aria-controls="experiment" tabindex="-1" data-study="rig" disabled><span class="study-number">06</span><span><b>关节联动</b><small>从肩到肘，从肘到腕</small></span><span class="study-arrow" aria-hidden="true">↗</span></button>
+   </nav>
+   <p class="sidebar-foot">不是静态预览。<br>暂停、拖动、改参数，<br>每一帧都可重新检查。</p>
+  </aside>
+  <section id="experiment" class="experiment" role="tabpanel" aria-labelledby="tab-handoff">
+   <div class="experiment-heading"><div><p class="eyebrow" id="mode-kicker">STUDY 01 / CONTINUITY</p><h2 id="mode-title">投影不动，表示改变。</h2></div><label class="guide-toggle"><input id="guides" type="checkbox" checked>显示参照</label></div>
+   <div class="player">
+    <div id="stage"><canvas id="three" aria-hidden="true"></canvas><canvas id="flat" width="960" height="540" aria-hidden="true"></canvas><div id="screen-dom" aria-hidden="true"><img alt=""></div><div id="title-layer" aria-hidden="true"><span>ONE OBJECT.<br>ONE LANDING.</span><small>The world leaves. The subject stays.</small></div>
+     <div id="gate"><div class="gate-content"><div class="gate-symbol" aria-hidden="true"><i></i><i></i><i></i></div><p class="eyebrow">A LITTLE PREPARATION. THEN YOU'RE IN.</p><h2 id="ready-title">让每一帧准备就绪。</h2><p id="load-label" role="status" aria-live="polite">字体 · 几何 · 路径 · GPU</p><div class="progress-row"><progress id="progress" max="6" value="0" aria-label="准备进度"></progress><output id="load-percent">0%</output></div><button id="start" type="button" disabled>准备中…</button><p class="gate-note" id="gate-note">加载完成后，由你开始。</p></div></div>
+    </div>
+    <div class="transport"><button id="play" class="play-button" type="button" disabled aria-label="播放">▶ <span>播放</span></button><button id="reset" class="icon-button" type="button" disabled aria-label="回到起点" title="回到起点">↺</button><button id="step-back" class="frame-button" type="button" disabled aria-label="后退一帧" title="后退 1/60 秒">−1f</button><button id="step-next" class="frame-button" type="button" disabled aria-label="前进一帧" title="前进 1/60 秒">+1f</button><input id="time" type="range" min="0" max="12" step="0.001" value="0" aria-label="动画时间" disabled><output id="time-label">0.00 / 12.00 s</output><label class="rate-label"><span class="sr-only">播放速度</span><select id="rate" disabled><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option></select></label></div>
    </div>
-   <div class="controls"><button id="play" disabled>播放</button><button id="reset" disabled>回到起点</button><input id="time" type="range" min="0" max="12" step="0.01" value="0" aria-label="Scene time" disabled><output id="time-label">0.00 / 12.00 s</output></div>
+   <nav id="beats" class="beats" aria-label="跳到动画阶段"></nav>
+   <div class="lab-bench">
+    <section class="parameter-panel" aria-labelledby="parameter-title"><div class="panel-heading"><h3 id="parameter-title">动手改一项</h3><button id="restore" type="button" disabled>恢复参数 ↺</button></div><div id="parameters"></div><p id="experiment-hint" class="experiment-hint"></p></section>
+    <section class="explanation" aria-labelledby="observe-title"><p class="eyebrow" id="observe-title">WHAT TO LOOK FOR</p><p id="description"></p><div class="readout"><span id="phase-label">等待开始</span><code id="metrics"></code></div></section>
+   </div>
+   <details class="implementation"><summary>这个机制怎么实现？ <span aria-hidden="true">＋</span></summary><p id="recipe-explanation"></p><pre><code id="recipe-code"></code></pre><a id="reference-link" href="https://github.com/Rayman0106/build-cinematic-3d-decks">阅读实现方法 ↗</a></details>
+   <p class="limit-note" id="limit"></p>
   </section>
  </div>
- <footer>程序几何与示意数据，无第三方人物或赛车。不是正式项目的录制。<a href="https://github.com/Rayman0106/build-cinematic-3d-decks">Skill 与完整说明</a></footer>
+ <footer><span>程序几何与示意数据。无第三方人物或赛车；非正式项目录像。</span><span>空格 播放 / 暂停 · ← → 逐帧 · Shift + ← → 1 秒</span></footer>
+ <div class="sr-only" id="announcement" role="status" aria-live="polite"></div>
 </main>
 <script type="module">@@MODULE@@</script>
 </body></html>

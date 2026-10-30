@@ -20,6 +20,8 @@ Give your AI a report, a topic, or an existing HTML project. This skill guides i
 
 The two complete cases are [F1 Economics](https://github.com/Rayman0106/f1-economics-3d-deck) and [Reaction Time](https://github.com/Rayman0106/reaction-time-math-3d-deck). The [six-study offline Lab](examples/playground.html) isolates the mechanisms. A lightweight [Showcase is prepared in `site/`](site/README.md); it is not yet a deployed service. There is no online prompt-to-deck generator.
 
+For a local showcase with the actual project assets and original choreography, use the [Real Project Lab builder](examples/case-lab/README.md) with your existing standalone case decks. Its native runtime payloads remain under each project's asset terms and are generated locally; the small procedural mechanism studies are a separate teaching tool.
+
 **Quick start:** download the [latest skill ZIP](https://github.com/Rayman0106/build-cinematic-3d-decks/releases/latest), install it under `~/.codex/skills/build-cinematic-3d-decks/`, and open a new Codex conversation. Ask: “Use $build-cinematic-3d-decks to turn this report into a browser presentation. Start with a storyboard and deliver the offline HTML and rebuildable source.”
 
 ## 装上以后，AI 可以帮你做什么？

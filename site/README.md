@@ -1,40 +1,25 @@
-# Cinematic 3D Showcase — local preparation
+# Cinematic 3D Showcase · local review, 30 October 2026
 
-This buildless site introduces two real presentations and the reusable skill. It is **not deployed** by this change. The home page does not load WebGL, a case deck, a model or video data before the reader chooses an action. The full decks stay on GitHub Releases.
+The local review connects the real-model Interactive Lab, two cases, one silent **55-second technical film**, credits and installation instructions. The 25-second promo was withdrawn after owner review; its original master is archived locally. The technical revision retains complete actions and dissolves only after they settle. It is not published. Monza and the approved full decks remain unchanged. Six Lab lesson groups use the original case renderers; the procedural mechanism example stays separate in `examples/playground.html`.
 
-## Contents
+The homepage loads no models, native deck or video until selected. The Lab begins with the native Mean / Median dot plot. Its second lesson is the budget-bar car driving into the next page, replacing the outline/photo example. F1 lessons share the same two-car renderer; the full-team Cadillac inspection is optional. Student/room content loads only when selected. The review master is 2400 × 1350/60fps; site derivatives are 1280 × 720/30fps. The film includes the full camera-entry and target-page title animation, with a short editorial closing card. Native WebGL capture sizes are recorded separately from the composite output dimensions.
 
-- Home: responsive dark editorial layout, real case imagery, accessible video dialog, installation copy action, source/Release links.
-- Media: a silent 25-second edit, a 9-second F1 handoff excerpt, and the archived 11.2-second character motion preview. Each has provenance and hashes.
-- Lab: byte-identical copy of [the existing self-contained example](../examples/playground.html), approximately 0.93 MB. All six studies and their controls are retained.
-- [Credits](sources.html): case media boundaries, font licence and project attribution links. The website does not relicense third-party models.
+## Build and preview
 
-## Rebuild and review
-
-From the repository root:
+From the repository root, after generating the owner-authorized case Lab:
 
 ```sh
-python scripts/build_examples.py
-python scripts/build_site.py
+python scripts/build_site.py --case-entry /path/to/Interactive-Lab.html --output /path/to/outputs/Cinematic-3D-Showcase
 python scripts/check_site.py
-python scripts/validate_package.py
+node scripts/test-case-lab.mjs
+node scripts/test-case-adapters.mjs
+node scripts/test-case-loading.mjs
 ```
 
-Images and videos are already prepared. Optional regeneration uses Pillow and FFmpeg; `scripts/prepare_site_images.py --help` and `scripts/build_promotion.py --help` list the required source paths. No source recording, case model or machine-specific path is bundled in the skill.
+The review server lives with local capture/delivery records and serves this directory plus an exact list of the generated shared model dependencies. The Lab manifest uses `../../Interactive-Lab-Scenes/` relative to `lab/index.html`; the local review folder must remain beside that generated shared directory. Models are not copied into the lightweight homepage package. Opening the review folder locally is supported by the generated carrier fallbacks; browser HTTP review uses original GLBs directly.
 
-Open `index.html` yourself or serve this directory with a normal local static server. Browser policies vary. During this preparation, the browser tool rejected the original local Lab/case HTML; no alternate protocol, renderer or browser was used to bypass that restriction. This is not a claim that the migrated Lab or current decks passed normal-speed playback.
+Current review: `http://127.0.0.1:8174/`. This is a local service, not a public URL. Source/Release links remain public GitHub links. `sources.html` distinguishes approved F1 footage, fresh native handoff captures and editorial graphics.
 
-Before deployment, review the home page at desktop and mobile widths, play each video, and independently test all six Lab modes and their Start/play/reset/seek controls. The lab copy hash is checked, but that is not a playback test.
+## Publication boundary
 
-## GitHub Pages — manual only
-
-The [Pages workflow](../.github/workflows/pages.yml) packages only `site/` and is triggered only through `workflow_dispatch`. No push or pull request deploys the site automatically. It has not been run, and repository Pages settings have not been changed.
-
-After owner approval:
-
-1. Review and merge the site branch and its prepared media.
-2. In repository Settings → Pages, choose GitHub Actions as the publishing source.
-3. Run **Publish reviewed showcase (manual)** on the reviewed branch. Check the Pages artifact and published URL.
-4. Test that URL, all media, the Lab and case Release links. Add the verified URL to the repository homepage/README. Set an absolute `og:image` URL once the real site address is verified.
-
-The configuration follows [GitHub's custom-workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages). No hosting account, token or private project is included.
+The manual workflow verifies the review sources and does not deploy this local package as if its large case assets were already hosted. Before publishing, resolve the asset base and classroom motion/licensing scope, validate the production dependency paths, and review the actual public URL. No deployment, account settings or community posting is included in this review delivery.

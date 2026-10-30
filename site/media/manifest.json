@@ -69,127 +69,151 @@
     "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
   },
   "videos": {
-    "created": "2026-10-22",
-    "type": "editorial cuts, not new browser recordings",
+    "created": "2026-10-30",
+    "edition": "55-second technical revision 2; 25-second promo withdrawn",
+    "published": false,
+    "seconds": 55,
+    "pixels": [
+      2400,
+      1350
+    ],
+    "fps": 60,
     "audio": false,
-    "sources": [
+    "policy": "Complete native actions; head/tail holds; cross-dissolves only inside those holds. Budget and wing scenes remain consecutive with no editorial cut.",
+    "chapters": [
       {
-        "id": "f1-master",
-        "kind": "saved final-deck recording",
-        "sha256": "4b8af626ed2b444861a514c71e6f76c87e77fd2ae32b60208b7d82f4910afe26",
-        "pixels": [
-          2400,
-          1350
+        "timeline": [
+          0,
+          15.4
         ],
-        "fps": 60,
-        "recorded": "2026-10-13"
+        "source": "outputs\\F1-Economics-Final-2400x1350-60fps-NoEngine.mp4",
+        "sourceTime": [
+          16.6,
+          31
+        ],
+        "tailHold": 1.0,
+        "completeAction": "Lights-out through launch, follow, zoom and reading state"
       },
       {
-        "id": "math-motion",
-        "kind": "archived development motion GIF",
-        "sha256": "bbee7d3f5ea045dffcbf5c1236958b410aff1bc90a421e073bd61d162efb3961",
-        "pixels": [
-          831,
-          467
+        "timeline": [
+          14.8,
+          34.4
         ],
-        "frames": 103,
-        "note": "Low source frame rate; repeated, never interpolated. Final typography and transitions not shown.",
-        "seconds": 11.2
+        "source": "work\\promotion-revision-20261030\\capture\\budget-wings.mp4",
+        "sourceTime": [
+          0,
+          17.6
+        ],
+        "leadHold": 0.8,
+        "tailHold": 1.2,
+        "completeAction": "Full 5.8s regulation followed directly by full 11.8s development"
+      },
+      {
+        "timeline": [
+          33.8,
+          42.1
+        ],
+        "source": "work\\promotion-revision-20261030\\capture\\screen-complete.mp4",
+        "sourceTime": [
+          0,
+          6.9
+        ],
+        "rate": 1,
+        "leadHold": 0.6,
+        "tailHold": 0.8,
+        "completeAction": "Full 2.7s camera entry followed by the full 4.2s target-page title animation"
+      },
+      {
+        "timeline": [
+          41.5,
+          50.7
+        ],
+        "source": "work\\promotion-finalize-20261028\\capture\\mean.mp4",
+        "sourceTime": [
+          0,
+          6.8
+        ],
+        "leadHold": 0.6,
+        "tailHold": 1.8,
+        "completeAction": "Full dot-plot/Mean-Median particle sequence"
+      },
+      {
+        "timeline": [
+          50.1,
+          55
+        ],
+        "source": "Editorial closing card",
+        "completeAction": "Closing only"
       }
     ],
-    "promo": {
-      "duration": 25,
-      "cuts": [
-        {
-          "start": 0,
-          "length": 5,
-          "source": "f1-master",
-          "sourceStart": 16
-        },
-        {
-          "start": 5,
-          "length": 5,
-          "source": "f1-master",
-          "sourceStart": 25
-        },
-        {
-          "start": 10,
-          "length": 5,
-          "source": "f1-master",
-          "sourceStart": 69.8
-        },
-        {
-          "start": 15,
-          "length": 5,
-          "source": "math-motion",
-          "sourceStart": 0
-        },
-        {
-          "start": 20,
-          "length": 5,
-          "source": "original editorial closing graphic"
-        }
-      ]
+    "transitions": [
+      {
+        "from": 0,
+        "to": 1,
+        "start": 14.8,
+        "seconds": 0.6,
+        "onlySettledFrames": true
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "start": 33.8,
+        "seconds": 0.6,
+        "onlySettledFrames": true
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "start": 41.5,
+        "seconds": 0.6,
+        "onlySettledFrames": true
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "start": 50.1,
+        "seconds": 0.6,
+        "onlySettledFrames": true
+      }
+    ],
+    "sources": {
+      "outputs\\F1-Economics-Final-2400x1350-60fps-NoEngine.mp4": {
+        "sha256": "4b8af626ed2b444861a514c71e6f76c87e77fd2ae32b60208b7d82f4910afe26"
+      },
+      "work\\promotion-revision-20261030\\capture\\budget-wings.mp4": {
+        "sha256": "4fa727f32b3741c758a68757ac95ab7ebf27f4791f2c25155564e33ef3401150"
+      },
+      "work\\promotion-revision-20261030\\capture\\screen-complete.mp4": {
+        "sha256": "d3c738e7921d04f7ffbd07eec1b480099cd80947dd0ed72572edd3b71e724162"
+      },
+      "work\\promotion-finalize-20261028\\capture\\mean.mp4": {
+        "sha256": "67f94dea472ed91c9412e587cebaf5c963abf9dd3e73c7127d5d64b20e178f3b"
+      }
     },
-    "technical": {
-      "duration": 55,
-      "status": "draft; not final Lab capture",
-      "cuts": [
-        {
-          "start": 0,
-          "length": 8,
-          "source": "f1-master",
-          "sourceStart": 22
-        },
-        {
-          "start": 8,
-          "length": 7,
-          "source": "original workflow diagram"
-        },
-        {
-          "start": 15,
-          "length": 20,
-          "source": "four original storyboard cards; Lab browser capture pending"
-        },
-        {
-          "start": 35,
-          "length": 10,
-          "source": "math-motion",
-          "sourceStart": 0
-        },
-        {
-          "start": 45,
-          "length": 10,
-          "source": "original install graphic"
-        }
-      ]
-    },
+    "resolutionBoundary": "Approved F1 footage native 2400x1350. New budget/development WebGL and original Math screen WebGL 1920x1080, composited to 2400x1350; text rendered at composite size. Site previews 1280x720/30fps.",
     "files": {
-      "Cinematic-3D-Showcase-25s-2400x1350-60fps.mp4": {
-        "bytes": 37930319,
-        "sha256": "e87fa1322d9ab0b926a8b43b11bca36f196563f8e73979d3f6ce84033ca4914e"
-      },
-      "Cinematic-3D-Technical-Draft-55s-2400x1350-60fps.mp4": {
-        "bytes": 23226393,
-        "sha256": "9d97887ee7f62268dececb0573d4555ac06c51dba38d06c310e425437d340112"
-      },
       "f1-handoff.mp4": {
         "bytes": 1569260,
         "sha256": "c28727b8c9f68bf3a4a0351e4246f55c67484a2b8dea473edc00995fd2e33b95"
       },
-      "reaction-motion.mp4": {
-        "bytes": 516612,
-        "sha256": "d16dafcb79d01b3473823bd83b10fe1593fda40191bcb05ed980892817168e20"
+      "technical-55s-v2.mp4": {
+        "bytes": 5102908,
+        "sha256": "5c66004ee36fe32738105cfc7915a76b13314e6611e9f6da8c2ee0fb02a3a163"
       },
-      "showcase-25s.mp4": {
-        "bytes": 3093923,
-        "sha256": "d0520f0ef5f1e269e055528705e2ab127374de0c9391158e17087125d8dfc6a7"
-      },
-      "Cinematic-3D-Technical-Draft-55s-720p.mp4": {
-        "bytes": 2305889,
-        "sha256": "176f7f6916fba7c305efbf01784f8197f6071bf1860874b61ea458c7996360c3"
+      "dotplot-type.mp4": {
+        "bytes": 236389,
+        "sha256": "bbf85ea93e5f4e34e950028c38c8d672508d30c0f9600d09f3437f39e07f1298"
       }
     }
   },
-  "notes": "New site derivatives of existing case media. No newly recorded project/Lab footage. Case asset credits still apply."
+  "notes": "October 30: 25s promo withdrawn. Keep one 55s technical revision with complete actions and settled-endpoint dissolves. Dot-plot case replaces the prior typography default.",
+  "archivedWebPreviews": {
+    "date": "2026-10-30",
+    "files": [
+      "showcase-25s.mp4",
+      "technical-55s.mp4",
+      "reaction-motion.mp4"
+    ],
+    "reason": "25s promo withdrawn; old 55s and type previews superseded. Original review masters preserved locally."
+  }
 }

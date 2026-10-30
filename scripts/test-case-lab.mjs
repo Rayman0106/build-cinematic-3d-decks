@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {CaseClock,CaseFrameQueue,CASE_LESSONS} from '../examples/case-lab/state.mjs';
+const clock=new CaseClock(31);clock.play(1000);assert.equal(clock.sample(2000),1);
+clock.setRate(.5,2000);assert.equal(clock.sample(4000),2);clock.pause(4000);assert.equal(clock.sample(9000),2);
+clock.seek(30);clock.play(10000);assert.equal(clock.sample(20000),31);clock.pause(20000);clock.play(21000);assert.equal(clock.sample(23000),1);
+clock.setDuration(2.7,23000);assert.equal(clock.sample(25000),1);clock.seek(-1);assert.equal(clock.time,0);clock.seek(99);assert.equal(clock.time,2.7);
+assert.throws(()=>clock.seek(NaN));assert.throws(()=>clock.setDuration(0));assert.throws(()=>clock.setRate(0));
+const queue=new CaseFrameQueue(),first=queue.submit({clip:'f1-launch',time:0,playing:true});assert.equal(first.seq,1);
+for(let time=1;time<=100;time++)assert.equal(queue.submit({clip:'f1-launch',time,playing:true}),null);
+assert.equal(queue.pending.time,0);assert.equal(queue.latest.time,100);
+assert.equal(queue.acknowledge(99).accepted,false);const ack=queue.acknowledge(1);assert.equal(ack.next.time,100);assert.equal(ack.next.seq,2);
+assert.equal(queue.acknowledge(2).accepted,true);assert.equal(queue.submit({clip:'f1-launch',time:100,playing:true}),null);
+queue.clear();const changed=queue.submit({clip:'math-type',time:0,playing:false});assert.equal(changed.seq,3);assert.equal(queue.acknowledge(1).accepted,false);
+assert.equal(CASE_LESSONS.length,6);assert.deepEqual([...new Set(CASE_LESSONS.map(l=>l.project))],['f1','math']);assert.equal(new Set(CASE_LESSONS.map(l=>l.id)).size,6);
+console.log(JSON.stringify({status:'pass',nativeClockRates:true,seekAndReplay:true,oneFrameInFlight:true,coalescesToLatestTime:true,staleAcknowledgementsIgnored:true,sixRealProjectLessons:true,scope:'Transport mathematics only. Does not render or certify the native case scenes.'},null,2));

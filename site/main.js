@@ -1,8 +1,8 @@
 'use strict';
 const films = {
-  showcase: {src:'media/showcase-25s.mp4',title:'Cinematic 3D Decks · 25-second showcase',caption:'Real F1 project excerpts and archived Reaction Time character motion. The closing card is an editorial graphic. Silent; source details and version boundaries are in Media & credits.'},
-  f1: {src:'media/f1-handoff.mp4',title:'F1 Economics · from race to reading',caption:'Saved final-deck recording, source 22–31 seconds. The track gives way to a readable slide. Silent; this does not demonstrate the current engine sound.'},
-  reaction: {src:'media/reaction-motion.mp4',title:'Reaction Time · archived character motion',caption:'Genuine development capture: sitting, standing and bowing. Original 831 × 467 GIF, approximately 11.2 seconds. Typography and slide numbering predate the final presentation. No new browser recording.'}
+  technical: {src:'media/technical-55s-v2.mp4',title:'Cinematic 3D Decks · 55-second technical demo · revision 2',caption:'Complete actions, then a transition: lights-out to reading, budget-bar car to development, physical screen to evidence, and dot-plot points to Mean / Median. Silent. Source and sample rates are listed in Media & credits.'},
+  f1: {src:'media/f1-handoff.mp4',title:'F1 Economics · from race to reading',caption:'Approved Monza final-deck recording, source 22–31 seconds. Silent; engine audio is excluded.'},
+  reaction: {src:'media/dotplot-type.mp4',title:'Reaction Time · the dot plot writes Mean / Median',caption:'The original dot plot supplies coloured particles to Mean / Median. Complete native animation, with a short final hold. Silent.'}
 };
 const dialog = document.getElementById('film-dialog');
 const video = document.getElementById('film-player');

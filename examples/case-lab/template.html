@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090e13"><title>Interactive Lab · Real Project Scenes</title><style>@@CSS@@</style></head>
+<body data-project="math">
+<main>
+ <header><a class="brand" href="https://github.com/Rayman0106/build-cinematic-3d-decks"><span class="brand-icon" aria-hidden="true">↗</span><span>CINEMATIC<br><b>3D DECKS</b></span></a><div class="edition"><i></i> ORIGINAL PROJECTS / INTERACTIVE LAB</div><button id="credits-button" class="quiet-button" type="button">来源与素材 ↗</button></header>
+ <div class="intro"><div><p class="eyebrow">THE SCENES. THE CRAFT. THE CONNECTION.</p><h1>看见故事，怎样发生。</h1></div><p>赛车、人物、场景和文字，来自两个完整项目。<br>选一个片段，慢放，拖动，看看它们如何接上。</p></div>
+ <div class="workspace">
+  <aside class="index"><div class="index-label">SCENE INDEX <span>01—06</span></div><nav id="lessons" aria-label="选择真实场景"></nav><p class="asset-note">使用原版模型、材质、字体和动作。先体验字效；赛车和人物场景按需准备，双车发车单独准备。</p><a id="open-original" href="F1-Economics-Final.html" target="_blank" rel="noopener">打开原版演示 ↗</a></aside>
+  <section class="main-view" aria-label="真实项目交互预览">
+   <div class="shot-heading"><div><p class="eyebrow" id="shot-kicker">05 / REACTION TIME</p><h2 id="shot-title">标题里的粒子，来自下面的证据。</h2></div><span class="source-tag" id="source-tag">原项目实时渲染</span></div>
+   <div class="viewer-shell">
+    <div id="viewer"><div id="frame-slot"></div><div id="cover"><img id="poster" alt="F1 原项目发车区预览"><div class="poster-shade"></div><div class="cover-copy"><span class="cover-kicker" id="cover-kicker">F1 ECONOMICS / MONZA</span><h3 id="cover-title">从发车，到故事的第一句。</h3><p id="cover-detail">正在读取原版赛车、赛道、材质和镜头。</p><div class="prepare-row"><progress id="load-progress" max="100" aria-label="原项目加载进度"></progress><output id="load-number">读取中</output></div><button id="start" type="button" disabled>正在准备原项目…</button><small id="cover-note">预览图来自原项目；准备完成后由你开始实时画面。</small></div></div><div id="render-error" role="alert" hidden></div></div>
+    <div class="transport"><button id="play" class="play-button" type="button" disabled>▶ <span>播放</span></button><button id="reset" type="button" class="icon-button" disabled aria-label="回到片段起点" title="回到片段起点">↺</button><button id="step-back" type="button" class="frame-button" disabled aria-label="后退一帧">−1f</button><button id="step-next" type="button" class="frame-button" disabled aria-label="前进一帧">+1f</button><input id="time" type="range" min="0" max="31" step="0.001" value="0" aria-label="原项目片段时间" disabled><output id="clock">0.00 / 31.00 s</output><button id="fullscreen" type="button" class="icon-button" aria-label="全屏实验台" title="全屏实验台">⛶</button></div>
+   </div>
+   <div class="lower-toolbar"><div class="variant-picker"><label for="variant">片段</label><select id="variant" disabled></select></div><div class="rate-picker"><span>速度</span><div id="rates" role="group" aria-label="播放速度"><button type="button" data-rate="0.25">¼×</button><button type="button" data-rate="0.5">½×</button><button type="button" data-rate="1" aria-pressed="true">1×</button></div></div><label class="check-control"><input id="loop" type="checkbox">循环</label><label class="check-control"><input id="show-text" type="checkbox" checked>文字</label></div>
+   <nav id="beats" class="beats" aria-label="跳转到原片段阶段"></nav>
+   <div class="scene-notes"><div><p class="eyebrow">WHAT TO WATCH</p><p id="watch-note"></p></div><div><p class="eyebrow">TRY THIS</p><p id="try-note"></p></div><div class="original-note"><span id="project-label">F1 Economics</span><small>原模型 · 原材质 · 原相机与轨迹</small><small id="status" role="status" aria-live="polite">准备原项目</small></div></div>
+  </section>
+ </div>
+ <footer><span>两个完整项目的真实片段。声音默认关闭；时间控制不改写原动作。</span><span>空格 播放 / 暂停 · ← → 逐帧 · Shift + ← → 1 秒</span></footer>
+</main>
+<dialog id="credits"><div class="dialog-head"><h2>原项目与素材</h2><button id="close-credits" class="quiet-button" type="button">关闭 ×</button></div><p>本地 Lab 复用两份演示中的原模型、材质、字体、镜头和动画，按实验准备相关资源。两份正式版文件保持不变。</p><div class="credit-project"><h3>F1 Economics</h3><p>双车发车、赛车照片配准、前后翼迭代与竞速镜头。</p><a href="https://github.com/Rayman0106/f1-economics-3d-deck" target="_blank" rel="noopener">项目与源码 ↗</a> · <a href="https://github.com/Rayman0106/f1-economics-3d-deck/blob/main/THIRD_PARTY_NOTICES.md" target="_blank" rel="noopener">模型、字体与许可 ↗</a></div><div class="credit-project"><h3>Reaction Time Mathematics</h3><p>原版人物、房间、显示器、数据图形、字效与关节动作。人物为研究场景的虚构示意角色。</p><a href="https://github.com/Rayman0106/reaction-time-math-3d-deck" target="_blank" rel="noopener">项目与源码 ↗</a> · <a href="https://github.com/Rayman0106/reaction-time-math-3d-deck/blob/main/THIRD_PARTY_NOTICES.md" target="_blank" rel="noopener">模型、动作与许可 ↗</a></div><p class="license-note">本地演示并不改变素材原许可。模型与动作不自动继承应用代码的 MIT 许可；当前版本未公开部署。</p></dialog>
+<script id="case-manifest" type="application/json">@@MANIFEST@@</script>
+<script>@@SCRIPT@@</script>
+</body></html>

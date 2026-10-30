@@ -7,7 +7,7 @@ def build():
     def read(name): return (ROOT/name).read_text(encoding='utf-8')
     three=read('vendor/three.module.min.js')
     module='import * as THREE from '+json.dumps('data:text/javascript;base64,'+base64.b64encode(three.encode()).decode())+';\n'
-    for name in ('assets/animation-core.mjs','assets/semantic-motion.mjs'):
+    for name in ('assets/animation-core.mjs','assets/semantic-motion.mjs','examples/lab/lab-state.mjs','examples/lab/lab-content.mjs'):
         code=read(name)
         code=re.sub(r'^import [^\n]+\n','',code,flags=re.M)
         code=re.sub(r'\bexport (?=(?:const|let|function|class)\b)','',code)
