@@ -2,7 +2,7 @@
  'use strict';
  const $=selector=>document.querySelector(selector),manifest=JSON.parse($('#case-manifest').textContent),channel='cinematic-real-case-lab-v1';
  const clock=new CaseClock(31),queue=new CaseFrameQueue(),reduced=matchMedia('(prefers-reduced-motion: reduce)');
- let lesson=CASE_LESSONS.find(item=>item.id===manifest.defaultLesson)||CASE_LESSONS[0],clip=lesson.variants[0],project=null,profile=null,iframe=null,glyphCache=null,heavyCache=null,waitingLoad=null,catalogue=new Map(),nativeReady=false,nativeStarted=false,pendingReveal=false,prepareVersion=0,autoplayAfterReveal=false,raf=0,resizeRaf=0,loadStartedAt=0;
+ let lesson=CASE_LESSONS.find(item=>item.id===manifest.defaultLesson)||CASE_LESSONS[0],clip=lesson.variants[0],project=null,profile=null,iframe=null,glyphCache=null,heavyCache=null,waitingLoad=null,catalogue=new Map(),nativeReady=false,nativeStarted=false,pendingReveal=false,prepareVersion=0,autoplayAfterReveal=false,raf=0,resizeRaf=0,loadStartedAt=0,lastActivity=0;
  const originals=manifest.projects;
  if(manifest.showcaseHome)document.querySelector('.brand').href=manifest.showcaseHome;
  const post=message=>{if(iframe?.contentWindow)iframe.contentWindow.postMessage({channel,...message},'*');};
@@ -56,7 +56,7 @@
  function loadProject(next,{force=false}={}){
   const plan=manifest.profiles[next];if(!plan)throw new Error('Missing experiment profile');
   if(iframe){if(profile==='math-type'&&nativeReady){glyphCache={iframe,catalogue,nativeReady,nativeStarted};iframe.style.visibility='hidden';iframe.style.pointerEvents='none';}else if(next==='math-type'&&nativeReady){heavyCache={iframe,catalogue,nativeReady,nativeStarted,profile};iframe.style.visibility='hidden';iframe.style.pointerEvents='none';}else{iframe.src='about:blank';iframe.remove();}iframe=null;}
-  nativeReady=false;nativeStarted=false;pendingReveal=false;prepareVersion++;catalogue=new Map();queue.clear();clock.seek(0,performance.now());loadStartedAt=performance.now();profile=next;project=plan.project;waitingLoad=null;
+  nativeReady=false;nativeStarted=false;pendingReveal=false;prepareVersion++;catalogue=new Map();queue.clear();clock.seek(0,performance.now());loadStartedAt=performance.now();lastActivity=loadStartedAt;profile=next;project=plan.project;waitingLoad=null;
   $('#cover').hidden=false;$('#render-error').hidden=true;$('#load-progress').removeAttribute('value');setText('#load-number','读取中');$('#start').disabled=true;setText('#start','正在准备原项目…');
   const size=((plan.entryBytes+plan.assetBytes)/1000000).toFixed(1);
   setText('#cover-detail',next==='math-type'?'只准备这一页的原版字效，不读取任何赛车、人物或房间模型。':`准备当前实验所需资源（约 ${size} MB）；保持原模型与贴图质量。`);setText('#status','按需准备 '+originals[project].name);
@@ -70,12 +70,13 @@
   }
   if(heavyCache&&next!=='math-type'){heavyCache.iframe.src='about:blank';heavyCache.iframe.remove();heavyCache=null;}
   if(plan.manualLoad&&!force){waitingLoad=next;setText('#cover-detail',`完整车队检阅需要 11 款赛车，约 ${size} MB；不会在打开 Lab 时自动加载。`);setText('#load-number','按需加载');setText('#start','加载 11 车型检阅  →');$('#start').disabled=false;updateVariants();return;}
-  iframe=document.createElement('iframe');iframe.title=originals[project].name+' native renderer';iframe.allow='fullscreen';iframe.addEventListener('error',()=>nativeError('片段文件读取失败，请确认资源目录完整，或使用在线版。'));if(plan.inlineHtml)iframe.srcdoc=plan.inlineHtml;else iframe.src=plan.runtime+'?clip='+encodeURIComponent(clip);$('#frame-slot').append(iframe);updateVariants();const loadingFrame=iframe;if(typeof setTimeout==='function')setTimeout(()=>{if(iframe===loadingFrame&&!nativeReady)nativeError('准备暂未完成。可重试当前片段；若使用本地文件，请保留完整资源目录。');},45000);
+  iframe=document.createElement('iframe');iframe.title=originals[project].name+' native renderer';iframe.allow='fullscreen';iframe.addEventListener('error',()=>nativeError('片段文件读取失败，请确认资源目录完整，或使用在线版。'));if(plan.inlineHtml)iframe.srcdoc=plan.inlineHtml;else iframe.src=plan.runtime+'?clip='+encodeURIComponent(clip);$('#frame-slot').append(iframe);updateVariants();const loadingFrame=iframe;const watchdog=()=>{if(iframe!==loadingFrame||nativeReady)return;if(performance.now()-lastActivity>90000)nativeError('资源超过 90 秒没有进展。请检查网络并重试当前片段。');else setTimeout(watchdog,10000);};if(typeof setTimeout==='function')setTimeout(watchdog,10000);
  }
  function nativeError(message){pause();queue.clear();$('#render-error').hidden=false;$('#render-error').textContent='原项目运行提示：'+message;setText('#cover-detail',message);setText('#load-number','加载提示');setText('#status','原项目返回运行提示');if(!nativeReady){$('#start').disabled=false;setText('#start','重试当前片段 →');}}
  window.addEventListener('message',event=>{
   const data=event.data;if(!iframe||event.source!==iframe.contentWindow||!data||data.channel!==channel||data.project!==project)return;
-  if(data.type==='progress'){$('#load-progress').value=Math.max(0,Math.min(100,data.percent));setText('#load-number',data.percent+'%');setText('#cover-detail','正在准备 '+data.detail+'。');}
+  if(data.type==='asset-progress'){lastActivity=performance.now();$('#load-progress').value=Math.max(0,Math.min(100,data.percent));setText('#load-number',data.percent+'%');setText('#cover-detail',`正在下载模型 ${data.loadedMB} / ${data.totalMB} MB。下载完成后还需解析与预热。`);setText('#status','正在下载当前案例资源');}
+  else if(data.type==='progress'){lastActivity=performance.now();$('#load-progress').removeAttribute('value');setText('#load-number','场景预热');setText('#cover-detail','资源解析与场景预热：'+data.detail+'。');}
   else if(data.type==='ready'){
    catalogue=new Map(data.clips.map(item=>[item.id,item]));nativeReady=true;const ms=Math.round(performance.now()-loadStartedAt);$('#status').dataset.preparationMs=String(ms);$('#load-progress').value=100;setText('#load-number','100%');setText('#cover-detail',profile==='math-type'?'本页原版字效已准备，未读取任何 3D 模型。':'当前实验所需模型、材质与镜头已准备。');setText('#start','开始这个片段  →');$('#start').disabled=false;setText('#status',`当前实验已准备 · ${(ms/1000).toFixed(1)} 秒 · 等待开始`);updateVariants();
   }else if(data.type==='started'){
