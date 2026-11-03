@@ -1,5 +1,7 @@
 # Promotion copy — draft only
 
+Historical drafting notes. For the current public entry points, use [current status](current-status.md). The 25-second draft was withdrawn; current promotion should use the retained 55-second technical film or a separately approved new edit. This file is not a record of posts already published.
+
 Not posted. Replace the site placeholder with the **verified public Pages URL after approval and deployment**. Do not describe the technical draft as live Lab footage or imply that the browser website generates complete decks from a prompt.
 
 ## Short English caption
@@ -10,7 +12,7 @@ Not posted. Replace the site placeholder with the **verified public Pages URL af
 
 Title: **From a 22-car opening to a readable slide: two Three.js presentation case studies**
 
-- Start with the actual 25-second clip and identify its saved/archived source boundaries.
+- Start with the retained 55-second technical film or a separately approved excerpt, preserving complete actions and identifying the actual source boundaries.
 - Explain one concrete handoff: preserve camera and subject projection while the track leaves the frame; leave a clean reading state.
 - Show source snippets for shared endpoint contracts and semantic chart points. Link to the small Lab rather than auto-loading the full decks.
 - Explain that model permissions, shadows/transparency, occlusion, loading and playback still require project-specific work.

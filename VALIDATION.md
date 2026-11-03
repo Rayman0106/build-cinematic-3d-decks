@@ -1,5 +1,13 @@
 # Validation scope
 
+## Maintenance release 1.0.3 · 2026-11-03
+
+This revision separates public source checks from native case-asset builds and clarifies the installation, complete-deck and live-Lab entry points. `build_site.py --check-source` compiles the host and manifest in memory without classroom assets or a generated-site rewrite. The source workflow retains numerical, packaging, continuity and inert host-control checks.
+
+The production real-project Lab remains on the separate `gh-pages` asset bank. No car model, actor motion, camera sampler, formal deck or live Lab runtime is changed by this maintenance release. No new normal-speed playback or cross-device verification is claimed. Check the current [source workflow](https://github.com/Rayman0106/build-cinematic-3d-decks/actions/workflows/check.yml) separately from the dated observations below. Installation and payload scope are in [current status](docs/current-status.md) and the [Chinese quick start](docs/START-HERE.zh-CN.md).
+
+The remaining entries preserve earlier release and review evidence. Their historical "not published" and access-limit statements describe those dated revisions.
+
 ## Owner revision 2 · 2026-10-30
 
 The 25-second promo is withdrawn. The retained 55-second technical film has been recut around complete native actions, with 0.6-second dissolves within held endpoints. The budget→car and development scenes run consecutively. Screen footage includes the target-page title after camera arrival; that title is not frozen halfway. The Lab replaces its outline/photo lesson with the native 5.8-second regulation/budget-car handoff, and its type lesson with the Mean / Median dot plot. Startup remains typography-only with manual Start, shared original models and unchanged formal deck hashes. Per-file decode, cut ranges and current browser evidence live with the local revision receipt. The entries below are historical records, not acceptance claims for this revision.

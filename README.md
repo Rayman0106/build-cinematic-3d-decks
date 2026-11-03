@@ -8,6 +8,16 @@
 
 English: a Codex skill that helps an AI turn reports, ideas or existing code into narrative browser presentations, combining readable 2D slides with continuous 3D scenes, meaningful text/chart animation and reproducible offline delivery.
 
+## 从视频过来的？从这里开始
+
+| 你想做什么 | 入口 |
+|---|---|
+| 下载并播放完整 F1 / 数学演示 | [F1 成品](https://github.com/Rayman0106/f1-economics-3d-deck/releases/latest) · [数学成品](https://github.com/Rayman0106/reaction-time-math-3d-deck/releases/latest)；下载其中的 HTML，用桌面 Edge / Chrome 打开 |
+| 安装 Skill，让 AI 帮你做自己的演示 | [中文快速上手](docs/START-HERE.zh-CN.md) · [最新 Skill ZIP](https://github.com/Rayman0106/build-cinematic-3d-decks/releases/latest) |
+| 先体验真实场景，再研究实现 | [在线 Interactive Lab](https://rayman0106.github.io/build-cinematic-3d-decks/lab/) · [当前入口与构建说明](docs/current-status.md) |
+
+仓库名：**`Rayman0106/build-cinematic-3d-decks`**。如果平台评论中的链接没有显示，可以在 GitHub 搜索这个完整名称。成品是浏览器 HTML 演示；Skill ZIP 提供工作流、源码和机制示例，完整案例与大型模型单独下载。
+
 ## English overview · what you can build
 
 Give your AI a report, a topic, or an existing HTML project. This skill guides it through a complete browser-presentation workflow:

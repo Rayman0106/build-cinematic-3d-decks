@@ -1,8 +1,14 @@
+> **Current state — 3 November 2026:** This file is a historical delivery record, not the current status. For the live public entry points, ZIP scope, check command and verification limits, see [Current public status](current-status.md). The deployed `gh-pages` site is at production SHA `9710d910`; the statements below describe earlier local preparations and superseded access limits.
+
+---
+
 # Showcase preparation — 22 October 2026
+
+*Historical record — retained for provenance; not current delivery status.*
 
 ## GitHub Pages publication — 30 October 2026
 
-Public showcase: https://rayman0106.github.io/build-cinematic-3d-decks/; production assets are in `gh-pages`. The first Lab view is the dot-plot experiment and the budget-bar car is the second. The public character uses the separately published CC0 motion; no raw or retargeted Mixamo track is distributed. Full-grid inspection remains local. The current source tests pass; online observations must be reported separately from build checks.
+Public showcase: https://rayman0106.github.io/build-cinematic-3d-decks/; production assets are in `gh-pages`. The first Lab view is the dot-plot experiment and the budget-bar car is the second. The public character uses the separately published CC0 motion; no raw or retargeted Mixamo track is distributed. Full-grid inspection remains local. Current build and verification status is maintained in [current-status.md](current-status.md); this dated record is not a live CI or playback result.
 
 ## Current revision 2 — 30 October 2026
 

@@ -12,7 +12,8 @@ jobs:
         with:
           node-version: '20'
       - run: python scripts/build_examples.py
-      - run: python scripts/build_site.py
+      # Public source checks must not require the owner's generated native decks.
+      - run: python scripts/build_site.py --check-source
       - run: python scripts/check_site.py
       - run: python scripts/validate_package.py
       - run: python scripts/validate_storyboard.py examples/storyboard.json
@@ -26,4 +27,4 @@ jobs:
       - run: node scripts/test-case-adapters.mjs
       - run: node scripts/test-case-loading.mjs
       - run: node --check examples/lab/main.mjs
-      - run: git diff --exit-code -- examples/playground.html site/lab/index.html
+      - run: git diff --exit-code -- examples/playground.html
