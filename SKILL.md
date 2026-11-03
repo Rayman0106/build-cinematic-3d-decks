@@ -3,7 +3,7 @@ name: build-cinematic-3d-decks
 description: "Create or repair HTML/WebGL presentations combining readable 2D slides, continuous 3D scenes and content-driven text/chart animation. Use to turn a topic or report into a storyboard and runnable deck, or improve an existing deck's models, camera, transitions, character motion and loading behavior."
 license: MIT
 metadata:
-  version: "1.0.3"
+  version: "1.0.4"
 ---
 
 # 用同一条故事线连接 2D 阅读与 3D 动作

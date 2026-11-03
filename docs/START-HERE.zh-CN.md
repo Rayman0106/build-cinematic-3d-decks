@@ -14,9 +14,11 @@
 ## 想用 Skill 做自己的演示
 
 1. 打开 [最新发行版](https://github.com/Rayman0106/build-cinematic-3d-decks/releases/latest)，下载名为 `build-cinematic-3d-decks-v<版本>.zip` 的文件。GitHub 自动附带的 Source code 压缩包是另一种源码下载入口。
-2. 解压后，将包含 `SKILL.md` 的 `build-cinematic-3d-decks` 文件夹放入 `~/.codex/skills/`。Windows 对应 `%USERPROFILE%\.codex\skills\`。若已有同名安装，先备份后更新，避免重复嵌套文件夹。
-3. 新开 Codex 对话，附上自己的报告、主题或已有项目，并明确调用 `$build-cinematic-3d-decks`。
+2. 解压后，将包含 `SKILL.md` 的 `build-cinematic-3d-decks` 文件夹放入 `~/.agents/skills/`。Windows 对应 `%USERPROFILE%\.agents\skills\`。若已有同名安装，先备份后更新，避免重复嵌套文件夹。
+3. 新开 Codex 对话，附上自己的报告、主题或已有项目，并明确调用 `$build-cinematic-3d-decks`。若未发现新安装，先检查文件夹层级，必要时重启客户端。
 4. 先审阅故事板和一个关键转场，再扩展整份演示。实际生成需要当前 AI 的执行环境和相应工具；ZIP 不包含模型账号、API 额度或案例完整资产库。
+
+目录依据 [OpenAI 当前 Skill 文档](https://learn.chatgpt.com/docs/build-skills)。也可放入工程内的 `.agents/skills/`，仅给该工程使用。本项目开发环境仍保留可用的旧 `.codex/skills` 安装；已有安装能正常发现时无需迁移，请勿同时安装两份同名 Skill。
 
 可以复制这段请求，并把方括号内的信息换成自己的内容：
 

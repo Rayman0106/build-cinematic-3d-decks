@@ -32,7 +32,7 @@ The two complete cases are [F1 Economics](https://github.com/Rayman0106/f1-econo
 
 For a local showcase with the actual project assets and original choreography, use the [Real Project Lab builder](examples/case-lab/README.md) with your existing standalone case decks. Its native runtime payloads remain under each project's asset terms and are generated locally; the small procedural mechanism studies are a separate teaching tool.
 
-**Quick start:** download the [latest skill ZIP](https://github.com/Rayman0106/build-cinematic-3d-decks/releases/latest), install it under `~/.codex/skills/build-cinematic-3d-decks/`, and open a new Codex conversation. Ask: “Use $build-cinematic-3d-decks to turn this report into a browser presentation. Start with a storyboard and deliver the offline HTML and rebuildable source.”
+**Quick start:** download the [latest skill ZIP](https://github.com/Rayman0106/build-cinematic-3d-decks/releases/latest), install it under `~/.agents/skills/build-cinematic-3d-decks/`, and open a new Codex conversation. Ask: “Use $build-cinematic-3d-decks to turn this report into a browser presentation. Start with a storyboard and deliver the offline HTML and rebuildable source.”
 
 ## 装上以后，AI 可以帮你做什么？
 
@@ -170,13 +170,13 @@ AI 入口：[SKILL.md](SKILL.md)。按任务只读相关参考，不需要一次
 下载 [Release 中的 Skill ZIP](https://github.com/Rayman0106/build-cinematic-3d-decks/releases/latest)，解压为：
 
 ```text
-~/.codex/skills/build-cinematic-3d-decks/SKILL.md
+~/.agents/skills/build-cinematic-3d-decks/SKILL.md
 ```
 
-Windows 对应用户目录下的 `.codex/skills/`。若已有同名 Skill，先备份再更新；不要嵌套成两层同名目录。也可以克隆到该目录，已有目录不能直接覆盖。
+Windows 对应用户目录下的 `.agents/skills/`。若已有同名 Skill，先备份再更新；不要嵌套成两层同名目录。也可以克隆到该目录，已有目录不能直接覆盖。
 
 ```sh
-git clone https://github.com/Rayman0106/build-cinematic-3d-decks.git ~/.codex/skills/build-cinematic-3d-decks
+git clone https://github.com/Rayman0106/build-cinematic-3d-decks.git ~/.agents/skills/build-cinematic-3d-decks
 ```
 
 重启或新开会话以重新发现 Skill，使用上面的请求即可。先从一个关键转场做起，也可以直接接管已有工程。

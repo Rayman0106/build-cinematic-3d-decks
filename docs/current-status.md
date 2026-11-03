@@ -29,3 +29,7 @@ Public GET requests returned 200 for the home page and Lab, and selected runtime
 The source workflow previously failed because it called `build_site.py` without the required case input. Version 1.0.3 adds `--check-source`, which validates the public host without classroom assets or rewriting the generated site. See the latest [Actions result](https://github.com/Rayman0106/build-cinematic-3d-decks/actions/workflows/check.yml) and [build-scope explanation](ci-source-and-assets.md). Source checks, HTTP availability and visual acceptance are separate evidence.
 
 The local case builder and optional `f1-grid` are documented in the [case Lab README](../examples/case-lab/README.md). Public deployment uses its separate approved asset bank; building a local variant does not automatically publish it. For installation and your first project, use the [Chinese quick start](START-HERE.zh-CN.md).
+
+## Installation documentation update · 1.0.4
+
+New installations use the current official personal `~/.agents/skills` or repository `.agents/skills` location. Existing working legacy installations do not need duplicate copies. See the [official skill guide](https://learn.chatgpt.com/docs/build-skills) and [Chinese quick start](START-HERE.zh-CN.md). This documentation correction does not change runtime animation.
