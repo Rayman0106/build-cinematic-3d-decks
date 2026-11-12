@@ -8,6 +8,8 @@
 
 English: a Codex skill that helps an AI turn reports, ideas or existing code into narrative browser presentations, combining readable 2D slides with continuous 3D scenes, meaningful text/chart animation and reproducible offline delivery.
 
+**1.1.0 · Final J 经验更新**：新增背景场所感与草木纵深、车漆/玻璃/HDR、树叶与阴影抗闪、CPU 缓存与加载多核、全屏预热及帧节奏的[完整指南与代码示例](references/rendering-and-frame-pacing.md)。对应的 [F1 正式 J 版](https://github.com/Rayman0106/f1-economics-3d-deck/releases/latest) 作为新的完整案例；在线 Lab 与历史影片保持各自已发布版本。
+
 ## 从视频过来的？从这里开始
 
 | 你想做什么 | 入口 |

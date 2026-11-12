@@ -2,7 +2,18 @@
 
 [公开项目](https://github.com/Rayman0106/f1-economics-3d-deck) · [动画/GIF](https://github.com/Rayman0106/f1-economics-3d-deck#see-it-in-action) · [正式成品](https://github.com/Rayman0106/f1-economics-3d-deck/releases/latest)
 
-来源：用户认可的 P42 视觉终版及 2026-10-14 后续音效修订。这个案例是浏览器 HTML／WebGL 演示，并不是一个原生 PPTX。当前 skill 只打包方法、原创数学工具与参考，不包含赛车模型、照片、字体、Logo、音轨、私人聊天或庞大的正式 HTML。
+来源：用户认可的 P42 叙事及后续音效修订，现已升级为 2026-11-12 Final J 的背景、材质和性能版。这个案例是 HTML／WebGL 演示，不是原生 PPTX。Skill 不打包赛车模型、照片、字体、Logo、音轨、私人聊天或庞大成品。
+
+## Final J：从场所感到稳定渲染
+
+主线与相机保留，新增连贯看台、分层树林、真实草丛、干沥青细节、HDR
+反射与车漆/玻璃材质。CPU 静态缓存、刚性阴影合批、最多 6 个加载 Worker、
+尺寸变化后的预热与 60fps 节奏共同减轻开销；远景叶片和开场影图分别抗闪。
+
+完整设计、失败原因、代码示例与验证边界见
+[渲染与帧节奏](rendering-and-frame-pacing.md) 和
+[项目 Final J 说明](https://github.com/Rayman0106/f1-economics-3d-deck/blob/main/docs/FINAL-J.md)。
+这是一套光栅 PBR/预计算方法，不称为 DLSS、实时光追或跨设备无卡顿。
 
 ## 八页叙事关系
 

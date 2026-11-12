@@ -1,5 +1,14 @@
 # Validation scope
 
+## Rendering guide 1.1.0 · 12 November 2026
+
+Documents the accepted F1 Final J revision: scenery continuity, material and HDR
+sources, alpha-mip foliage, stable shadow focus/LOD, static CPU caches, bounded
+startup Workers, viewport warming and wall-clock frame pacing. Includes links to
+the production source and measured limits. It does not replace the online Lab's
+asset bank, record a new film or modify the mathematics case. Package/link checks
+are rerun for this guide; prior runtime measurements remain explicitly dated.
+
 ## Maintenance release 1.0.3 · 2026-11-03
 
 This revision separates public source checks from native case-asset builds and clarifies the installation, complete-deck and live-Lab entry points. `build_site.py --check-source` compiles the host and manifest in memory without classroom assets or a generated-site rewrite. The source workflow retains numerical, packaging, continuity and inert host-control checks.

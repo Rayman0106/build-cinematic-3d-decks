@@ -1,4 +1,9 @@
-# Current public status — 3 November 2026
+# Current public status — 12 November 2026
+
+Skill 1.1.0 adds the [Final J rendering guide](../references/rendering-and-frame-pacing.md).
+The complete F1 release is updated to the owner's accepted J background/material/
+performance revision. The Showcase film, deployed Lab and mathematics deck keep
+their existing published versions; they are not silently upgraded by a Skill ZIP.
 
 This page is the current public entry point. The dated [showcase delivery record](showcase-delivery.md) is history and does not describe the present deployment.
 

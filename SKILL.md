@@ -3,7 +3,7 @@ name: build-cinematic-3d-decks
 description: "Create or repair HTML/WebGL presentations combining readable 2D slides, continuous 3D scenes and content-driven text/chart animation. Use to turn a topic or report into a storyboard and runnable deck, or improve an existing deck's models, camera, transitions, character motion and loading behavior."
 license: MIT
 metadata:
-  version: "1.0.4"
+  version: "1.1.0"
 ---
 
 # 用同一条故事线连接 2D 阅读与 3D 动作
@@ -47,6 +47,7 @@ metadata:
 | 字体、粒子、逐笔填字、内容互动、字幕闪烁 | [语义字体动画](references/typography.md) |
 | 点、线、曲线、箱线图之间的连续变化 | [图表编舞](references/chart-choreography.md) |
 | 材质、轮胎、透明、看台镂空、闪烁 | [场景质量](references/scene-quality.md) |
+| 背景纵深、HDR/车漆、树叶/阴影闪烁、首播卡顿和多核 | [渲染与帧节奏](references/rendering-and-frame-pacing.md) |
 | 多声源、换挡、多普勒、慢放音量 | [音效设计](references/audio.md) |
 | 黑屏、卡顿、预计算、Start、设备适配 | [准备与性能](references/performance-and-startup.md) |
 | 可重建工程、单 HTML、清理、GitHub | [构建与发布](references/delivery.md) |
@@ -100,6 +101,8 @@ metadata:
 展示真实阶段进度：字体、解码、模型解析、字形、动作/图表路径、GPU 材质、代表机位。准备后等待 Start；全屏及声音在手势中解锁，尺寸稳定后才启动时钟。失败时有清楚状态，不无限黑屏。
 
 预热覆盖实际 shader 变体与转场；预编译不等于纹理已经上传。在预处理缓存轮廓、字形和锚点，避免播放中重复 getImageData、布局测量和资源分配。
+
+对成熟项目先区分共面冲突、alpha/mip 丢失与影图焦点跳变。静态世界缓存、刚性阴影合批和 Worker 预计算可减少 CPU 工作；播放时钟保持绝对秒数。全屏改尺寸后先预分配并热好实际 target，再开时钟。用实际 drawing buffer 和尾部帧间隔验证收益，详见 [Final J 渲染经验](references/rendering-and-frame-pacing.md)。
 
 ### 8. 先给证据，再写验收结论
 
