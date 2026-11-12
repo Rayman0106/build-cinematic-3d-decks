@@ -10,6 +10,12 @@ English: a Codex skill that helps an AI turn reports, ideas or existing code int
 
 **1.1.0 · Final J 经验更新**：新增背景场所感与草木纵深、车漆/玻璃/HDR、树叶与阴影抗闪、CPU 缓存与加载多核、全屏预热及帧节奏的[完整指南与代码示例](references/rendering-and-frame-pacing.md)。对应的 [F1 正式 J 版](https://github.com/Rayman0106/f1-economics-3d-deck/releases/latest) 作为新的完整案例；在线 Lab 与历史影片保持各自已发布版本。
 
+**当前案例画面 · Final J**：下图来自新版实际场景，展示当前草地、树林、车辆与建筑材质。[查看新版图片、动图和开场视频](https://github.com/Rayman0106/f1-economics-3d-deck#see-it-in-action)。
+
+| Trackside depth and modelled grass | Paint, daylight and architectural materials |
+|---|---|
+| [![F1 Final J trackside grass and forest](https://raw.githubusercontent.com/Rayman0106/f1-economics-3d-deck/main/docs/media/track.jpg?v=final-j-20261112)](https://github.com/Rayman0106/f1-economics-3d-deck#see-it-in-action) | [![F1 Final J team inspection and materials](https://raw.githubusercontent.com/Rayman0106/f1-economics-3d-deck/main/docs/media/inspection.jpg?v=final-j-20261112)](https://github.com/Rayman0106/f1-economics-3d-deck#see-it-in-action) |
+
 ## 从视频过来的？从这里开始
 
 | 你想做什么 | 入口 |
@@ -160,7 +166,7 @@ For a local showcase with the actual project assets and original choreography, u
 
 | F1 Economics | Reaction Time · Mathematics |
 |---|---|
-| [![F1 presentation cover](https://raw.githubusercontent.com/Rayman0106/f1-economics-3d-deck/main/docs/media/cover.jpg)](https://github.com/Rayman0106/f1-economics-3d-deck#see-it-in-action) | [![Reaction Time study room](https://raw.githubusercontent.com/Rayman0106/reaction-time-math-3d-deck/main/docs/media/study-room.jpg)](https://github.com/Rayman0106/reaction-time-math-3d-deck#scene-gallery) |
+| [![F1 presentation cover](https://raw.githubusercontent.com/Rayman0106/f1-economics-3d-deck/main/docs/media/cover.jpg?v=final-j-20261112)](https://github.com/Rayman0106/f1-economics-3d-deck#see-it-in-action) | [![Reaction Time study room](https://raw.githubusercontent.com/Rayman0106/reaction-time-math-3d-deck/main/docs/media/study-room.jpg)](https://github.com/Rayman0106/reaction-time-math-3d-deck#scene-gallery) |
 | 赛车、成本、预算约束、研发和竞争形成主线；赛道退去后进入纯 2D 阅读。 | 实验者、电脑屏幕、图表证据、反思和结尾形成主线；字体从内容中产生。 |
 
 上图是链接到案例的项目预览，不随 Skill 再分发其模型或原始动作。案例媒体来源、许可和版本边界见各项目说明。

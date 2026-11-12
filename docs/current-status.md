@@ -5,6 +5,11 @@ The complete F1 release is updated to the owner's accepted J background/material
 performance revision. The Showcase film, deployed Lab and mathematics deck keep
 their existing published versions; they are not silently upgraded by a Skill ZIP.
 
+The F1 repository and this README case gallery now use current J stills and a
+new opening GIF/MP4. See the [capture provenance](https://github.com/Rayman0106/f1-economics-3d-deck/blob/main/docs/media/SOURCES.md).
+Those sampled native-scene frames update the project previews; they do not
+replace the separately deployed Lab or its historical technical film.
+
 This page is the current public entry point. The dated [showcase delivery record](showcase-delivery.md) is history and does not describe the present deployment.
 
 ## Three distinct deliverables
